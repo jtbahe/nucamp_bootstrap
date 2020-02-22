@@ -1,6 +1,7 @@
 // <!-- Jquery Scripts -->
         // shorthand for document.ready
         $(function() {
+// Carousel Function
             $(".carousel").carousel( { interval: 2000 } );
             $("#carouselButton").click(function(){
                 if ($("#carouselButton").children("i").hasClass("fa-pause")) {
@@ -13,4 +14,14 @@
                     $("#carouselButton").children("i").addClass("fa-pause"); 
                 }
             });
+
+
+// Reserve Campsite and login Modal Activation
+           $("#reserveButton").click(function() {
+              $("#reserveModal").modal('toggle');
+           })
+           $("#loginButton").click(function() {
+               $("#loginModal").modal('toggle');
+           })
         });
+
